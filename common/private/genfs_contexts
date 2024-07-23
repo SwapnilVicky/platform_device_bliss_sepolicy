@@ -1,0 +1,2 @@
+genfscon iso9660 / u:object_r:iso9660:s0
+genfscon udf / u:object_r:udf:s0
