@@ -1,5 +1,7 @@
 recovery_only(`
+userdebug_or_eng(`
 permissive recovery;
+')
 
 # Volume manager
 r_dir_file(recovery, sdcard_type)
