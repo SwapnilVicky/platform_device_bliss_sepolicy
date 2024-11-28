@@ -12,13 +12,8 @@ endif
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/bliss/sepolicy/qcom/private
 
-ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/bliss/sepolicy/qcom/dynamic \
-    device/bliss/sepolicy/qcom/system
-else
+ifneq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/bliss/sepolicy/qcom/dynamic \
     device/bliss/sepolicy/qcom/vendor
 endif
 
